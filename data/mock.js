@@ -17,10 +17,14 @@
      /v1/ranking           derivado del campo world_ranking de /v1/teams
                            (los puntos FIFA quedan nulos: no se inventan)
      /v1/standings         los 12 grupos, tal como los devuelve la API (vacíos)
+     /v1/records/          muestra de 60 highlights en video (la API devuelve
+                           5.717; se guarda una muestra representativa para no
+                           penalizar la carga de las 19 páginas). Este endpoint
+                           se respalda porque el proxy CORS devuelve 413
+                           (respuesta demasiado grande) al pedirlo en vivo.
 
-   NO cubiertos (la API no respondió al descargarlos): news, ball,
-   sound, mascots, events y records. Esas páginas mostrarán
-   "no disponible" si se abren sin conexión al API.
+   NO cubiertos: news, ball, sound, events. El endpoint /v1/mascots
+   no existe en la API (responde "mascots not found").
 
    Para la entrega final: eliminar este archivo y su etiqueta
    <script> de las 19 páginas, o poner FALLBACK_A_MOCK en false.
@@ -2273,5 +2277,427 @@ WC.MOCK = {
    "previous_rank": null,
    "points": null
   }
- ]
+ ],
+ "/v1/records/": [
+ {
+  "id": 7517886,
+  "title": "England - Croatia",
+  "subtitle": "Start of the match",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12685%2F451583.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12685/451583.jpg"
+ },
+ {
+  "id": 7519201,
+  "title": "Ayari Y. (SWE) 41' ",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12697%2F452250.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12697/452250.jpg"
+ },
+ {
+  "id": 7535617,
+  "title": "Press Conference",
+  "subtitle": "Czechia | Miroslav Koubek & Ladislav Krejčí",
+  "url": "https://www.youtube.com/watch?v=7uKQmyXzAjc",
+  "thumbnail_url": "https://i.ytimg.com/vi/7uKQmyXzAjc/hqdefault.jpg"
+ },
+ {
+  "id": 7537721,
+  "title": "Mbuku N. (COD) 17' ",
+  "subtitle": "Goal Disallowed (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12744%2F454678.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12744/454678.jpg"
+ },
+ {
+  "id": 7536439,
+  "title": "Gharbi I. (TUN) 2'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12731%2F453936.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12731/453936.jpg"
+ },
+ {
+  "id": 7554476,
+  "title": "Canada advances",
+  "subtitle": "Canada make history as they advance to Round of 16 over South Africa",
+  "url": "https://www.youtube.com/watch?v=s-xeRjLMr_A",
+  "thumbnail_url": "https://i.ytimg.com/vi/s-xeRjLMr_A/hqdefault.jpg"
+ },
+ {
+  "id": 7554183,
+  "title": "England 2 - 1 DR Congo",
+  "subtitle": "Full Highlights",
+  "url": "https://www.youtube.com/watch?v=HkjIzB7Vr_A",
+  "thumbnail_url": "https://i.ytimg.com/vi/HkjIzB7Vr_A/hqdefault.jpg"
+ },
+ {
+  "id": 7501153,
+  "title": "Bruno Guimaraes (BRA) 67'",
+  "subtitle": "Replay",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12656%2F450268.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12656/450268.jpg"
+ },
+ {
+  "id": 7536344,
+  "title": "Gaari J. (CUW) 14'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12726%2F453846.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12726/453846.jpg"
+ },
+ {
+  "id": 7536580,
+  "title": "McKennie W. (USA) 45'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12732%2F454029.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12732/454029.jpg"
+ },
+ {
+  "id": 7553795,
+  "title": "Côte d'Ivoire 1 - 2 Norway",
+  "subtitle": "Full Highlights",
+  "url": "https://www.youtube.com/watch?v=nTkMIzbsMuo",
+  "thumbnail_url": "https://i.ytimg.com/vi/nTkMIzbsMuo/hqdefault.jpg"
+ },
+ {
+  "id": 7518252,
+  "title": "Schick P. (CZE) 1'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12688%2F451710.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12688/451710.jpg"
+ },
+ {
+  "id": 7532165,
+  "title": "Argentina - Austria (2-0)",
+  "subtitle": "Full Highlights",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12709%2Fmaster.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12709/master.jpg"
+ },
+ {
+  "id": 7555210,
+  "title": "Moreira S. (CPV) 39'",
+  "subtitle": "Cross",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12881%2F458577.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12881/458577.jpg"
+ },
+ {
+  "id": 7555713,
+  "title": "Kone M. (FRA) 54'",
+  "subtitle": "Big chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12897%2F458813.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12897/458813.jpg"
+ },
+ {
+  "id": 7501054,
+  "title": "Alaaeldin A. (QAT) 90'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12655%2F450231.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12655/450231.jpg"
+ },
+ {
+  "id": 7537169,
+  "title": "Lukaku R. (BEL) 86' (1-4)",
+  "subtitle": "Goal",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12738%2F454347.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12738/454347.jpg"
+ },
+ {
+  "id": 7537903,
+  "title": "Otamendi N. (ARG) 45+3'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12749%2F454806.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12749/454806.jpg"
+ },
+ {
+  "id": 7517368,
+  "title": "Sarr I. (SEN) 31'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12677%2F451261.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12677/451261.jpg"
+ },
+ {
+  "id": 7532387,
+  "title": "Jordan 1 - 2 Algeria",
+  "subtitle": "Full Highlights",
+  "url": "https://www.youtube.com/watch?v=Ydxmm_-PUo0",
+  "thumbnail_url": "https://i.ytimg.com/vi/Ydxmm_-PUo0/hqdefault.jpg"
+ },
+ {
+  "id": 7555118,
+  "title": "Salah M. (EGY) 93’",
+  "subtitle": "Big chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12876%2F458535.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12876/458535.jpg"
+ },
+ {
+  "id": 7500447,
+  "title": "Muharemović T. (BIH) 59'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12640%2F449835.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12640/449835.jpg"
+ },
+ {
+  "id": 7554502,
+  "title": "Belgium - Senegal (3-2) (AET)",
+  "subtitle": "Full Highlights",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12820%2Fmaster.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12820/master.jpg"
+ },
+ {
+  "id": 7556126,
+  "title": "Haaland E. (NOR) 66’",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12931%2F459566.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12931/459566.jpg"
+ },
+ {
+  "id": 7514179,
+  "title": "Vinas F. (URU) 50'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12675%2F451175.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12675/451175.jpg"
+ },
+ {
+  "id": 7519860,
+  "title": "Lenini K. (CPV) 21' (0-1)",
+  "subtitle": "Goal (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12707%2F452842.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12707/452842.jpg"
+ },
+ {
+  "id": 7537862,
+  "title": "Schlager X. (AUT) 8'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12750%2F454776.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12750/454776.jpg"
+ },
+ {
+  "id": 7568475,
+  "title": "Trossard L. (BEL) 14'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12958%2F460525.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12958/460525.jpg"
+ },
+ {
+  "id": 7501777,
+  "title": "Gakpo C. (NED) 73'",
+  "subtitle": "Big chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12668%2F450960.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12668/450960.jpg"
+ },
+ {
+  "id": 7537077,
+  "title": "Taremi M. (IRN) 11'",
+  "subtitle": "Penalty missed (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12739%2F454268.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12739/454268.jpg"
+ },
+ {
+  "id": 7554430,
+  "title": "USA 2 - 0 Bosnia & Herzegovina",
+  "subtitle": "Full Highlights",
+  "url": "https://www.youtube.com/watch?v=yeH-ENCbEqA",
+  "thumbnail_url": "https://i.ytimg.com/vi/yeH-ENCbEqA/hqdefault.jpg"
+ },
+ {
+  "id": 7571623,
+  "title": "Alvarez J. (ARG) 39'",
+  "subtitle": "Big chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12982%2F460933.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12982/460933.jpg"
+ },
+ {
+  "id": 7517562,
+  "title": "Argentina 3 - 0 Algeria",
+  "subtitle": "Full Highlights",
+  "url": "https://www.youtube.com/watch?v=WPb5ygDeiK4",
+  "thumbnail_url": "https://i.ytimg.com/vi/WPb5ygDeiK4/hqdefault.jpg"
+ },
+ {
+  "id": 7520029,
+  "title": "Ashour E. (EGY) 50'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12708%2F452909.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12708/452909.jpg"
+ },
+ {
+  "id": 7518748,
+  "title": "Press Conference",
+  "subtitle": "Cote d'Ivoire | Emerse Fae",
+  "url": "https://www.youtube.com/watch?v=E7v8zCd-VVc",
+  "thumbnail_url": "https://i.ytimg.com/vi/E7v8zCd-VVc/hqdefault.jpg"
+ },
+ {
+  "id": 7519536,
+  "title": "Ueda A. (JPN) 83' (0-4)",
+  "subtitle": "Goal",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12702%2F452512.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12702/452512.jpg"
+ },
+ {
+  "id": 7535998,
+  "title": "Cunha M. (BRA) 45'",
+  "subtitle": "Big chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12722%2F453504.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12722/453504.jpg"
+ },
+ {
+  "id": 7536871,
+  "title": "Bobb O. (NOR) 63'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12734%2F454156.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12734/454156.jpg"
+ },
+ {
+  "id": 7555294,
+  "title": "Williams I. (GHA) 34'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12882%2F458634.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12882/458634.jpg"
+ },
+ {
+  "id": 7500063,
+  "title": "Jimenez R. (MEX) 73'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12621%2F449393.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12621/449393.jpg"
+ },
+ {
+  "id": 7518792,
+  "title": "McGinn J. (SCO) 49'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12694%2F452001.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12694/452001.jpg"
+ },
+ {
+  "id": 7536573,
+  "title": "Bos J. (AUT) 36'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12733%2F454022.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12733/454022.jpg"
+ },
+ {
+  "id": 7517816,
+  "title": "Moutoussamy S. (COD) 45+3'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12681%2F451537.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12681/451537.jpg"
+ },
+ {
+  "id": 7518413,
+  "title": "Switzerland 4 - 1 BiH",
+  "subtitle": "Full Highlights",
+  "url": "https://www.youtube.com/watch?v=-03EV-JcV18",
+  "thumbnail_url": "https://i.ytimg.com/vi/-03EV-JcV18/hqdefault.jpg"
+ },
+ {
+  "id": 7535555,
+  "title": "O'Reilly N. (ENG) 86'",
+  "subtitle": "Big chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12714%2F453179.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12714/453179.jpg"
+ },
+ {
+  "id": 7553858,
+  "title": "Olise M. (FRA) 65'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12785%2F455666.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12785/455666.jpg"
+ },
+ {
+  "id": 7500564,
+  "title": "Tillman M. (USA) 37'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12645%2F450005.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12645/450005.jpg"
+ },
+ {
+  "id": 7517633,
+  "title": "Arnautović M. (AUT) 90+12’ (3-1)",
+  "subtitle": "Goal",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12680%2F451435.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12680/451435.jpg"
+ },
+ {
+  "id": 7536962,
+  "title": "Al Dawsari N. (KSA) 18'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12737%2F454193.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12737/454193.jpg"
+ },
+ {
+  "id": 7536917,
+  "title": "Senegal 5 - 0 Iraq",
+  "subtitle": "Full Highlights",
+  "url": "https://www.youtube.com/watch?v=Rf9AgsBO_3Y",
+  "thumbnail_url": "https://i.ytimg.com/vi/Rf9AgsBO_3Y/hqdefault.jpg"
+ },
+ {
+  "id": 7514025,
+  "title": "Pedri (ESP) 36’",
+  "subtitle": "Big chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12673%2F451080.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12673/451080.jpg"
+ },
+ {
+  "id": 7518094,
+  "title": "Mojica J. (COL) 53'",
+  "subtitle": "Cross",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12687%2F451689.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12687/451689.jpg"
+ },
+ {
+  "id": 7518969,
+  "title": "Demiral M. (TUR) 90+7'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12696%2F452122.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12696/452122.jpg"
+ },
+ {
+  "id": 7535920,
+  "title": "Johnston A. (CAN) 90+6'",
+  "subtitle": "Chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12718%2F453461.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12718/453461.jpg"
+ },
+ {
+  "id": 7554897,
+  "title": "Rieder F. (SUI) 81'",
+  "subtitle": "Big chance",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12848%2F457548.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12848/457548.jpg"
+ },
+ {
+  "id": 7537070,
+  "title": "Uruguay 0 - 1 Spain",
+  "subtitle": "Full Highlights",
+  "url": "https://www.youtube.com/watch?v=cQx_4725VKo",
+  "thumbnail_url": "https://i.ytimg.com/vi/cQx_4725VKo/hqdefault.jpg"
+ },
+ {
+  "id": 7501610,
+  "title": "Schlotterbeck N. (GER) 44'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12667%2F450680.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12667/450680.jpg"
+ },
+ {
+  "id": 7501892,
+  "title": "Diallo A. (CIV) 90' (1-0)",
+  "subtitle": "Goal",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12669%2F451018.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12669/451018.jpg"
+ },
+ {
+  "id": 7518503,
+  "title": "Son Heung-Min (KOR) 32'",
+  "subtitle": "Chance (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12691%2F451929.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12691/451929.jpg"
+ },
+ {
+  "id": 7532251,
+  "title": "Pedersen M. (NOR) 43' (1-0)",
+  "subtitle": "Goal (replay)",
+  "url": "https://www.sofascore.com/video-player.html?url=https%3A%2F%2Fhighlights-arena-nippy.b-cdn.net%2Fhighlights%2F2026%2F1%2F71%2F12711%2F453026.hd%2Fplaylist.m3u8",
+  "thumbnail_url": "https://nippy-assets.arenacloudtv.com/highlights/2026/1/71/12711/453026.jpg"
+ }
+]
 };
