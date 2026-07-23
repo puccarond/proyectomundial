@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendario de Partidos | Mundial FIFA 2026</title>
+  <meta name="description" content="Calendario completo del Mundial 2026. Filtra los partidos por ciudad, ronda, estatus, grupo y equipo.">
+
+  <link rel="icon" href="assets/img/logo/logo-mundial-2026.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <h1 class="titulo-pagina">Calendario de Partidos</h1>
+        <p class="text-center text-muted-wc mb-4" id="resumenPartidos">
+          104 partidos, 16 sedes, 3 países.
+        </p>
+
+        <!-- ===================== FILTROS ===================== -->
+        <div class="card-wc p-3 p-md-4 mb-4">
+          <div class="row g-3 align-items-end">
+            <div class="col-6 col-md-4 col-lg">
+              <label class="form-label small text-muted-wc mb-1" for="filtroEquipo">Equipo</label>
+              <select class="form-select buscador-wc" id="filtroEquipo">
+                <option value="">Todos</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-4 col-lg">
+              <label class="form-label small text-muted-wc mb-1" for="filtroCiudad">Ciudad</label>
+              <select class="form-select buscador-wc" id="filtroCiudad">
+                <option value="">Todas</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-4 col-lg">
+              <label class="form-label small text-muted-wc mb-1" for="filtroRonda">Ronda</label>
+              <select class="form-select buscador-wc" id="filtroRonda">
+                <option value="">Todas</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-4 col-lg">
+              <label class="form-label small text-muted-wc mb-1" for="filtroGrupo">Grupo</label>
+              <select class="form-select buscador-wc" id="filtroGrupo">
+                <option value="">Todos</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-4 col-lg">
+              <label class="form-label small text-muted-wc mb-1" for="filtroEstatus">Estatus</label>
+              <select class="form-select buscador-wc" id="filtroEstatus">
+                <option value="">Todos</option>
+                <option value="scheduled">Próximos</option>
+                <option value="live">En vivo</option>
+                <option value="finished">Finalizados</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-4 col-lg-auto">
+              <button class="btn btn-fantasma w-100" id="btnLimpiar">
+                <i class="bi bi-arrow-counterclockwise me-1"></i>Limpiar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-muted-wc small mb-3" id="contadorResultados"></p>
+
+        <!-- ================= LISTADO DE PARTIDOS ============= -->
+        <div class="row g-3" id="listaPartidos"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Datos de respaldo (solo se usan si la API no responde) -->
+  <script src="data/mock.js"></script>
+
+  <!-- Módulos compartidos, en orden de dependencia -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/componentes.js"></script>
+
+  <!-- Script propio de esta página -->
+  <script src="assets/js/paginas/partidos.js"></script>
+</body>
+</html>
